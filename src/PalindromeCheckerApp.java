@@ -1,7 +1,6 @@
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.Scanner;
-import java.util.Stack;
 
 public class PalindromeCheckerApp {
     public static void main(String[] args) {
@@ -23,17 +22,14 @@ public class PalindromeCheckerApp {
         }
 
         String cleaned = str.toLowerCase();
-        Stack<Character> stack = new Stack<>();
-        Queue<Character> queue = new LinkedList<>();
+        Deque<Character> deque = new ArrayDeque<>();
 
         for (int i = 0; i < cleaned.length(); i++) {
-            char ch = cleaned.charAt(i);
-            stack.push(ch);
-            queue.add(ch);
+            deque.addLast(cleaned.charAt(i));
         }
 
-        while (!stack.isEmpty()) {
-            if (!stack.pop().equals(queue.remove())) {
+        while (deque.size() > 1) {
+            if (!deque.removeFirst().equals(deque.removeLast())) {
                 return false;
             }
         }
