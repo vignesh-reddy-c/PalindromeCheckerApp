@@ -5,8 +5,8 @@ public class PalindromeCheckerApp {
 
         System.out.println("Welcome to Palindrome Checker Application");
 
-        Scanner sc = new Scanner(system.in);
-        system.out.println("enter a word to check polindrome :");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter a word to check polindrome :");
         String word = sc.nextLine();
         String reversed = new StringBuilder(word).reverse().toString();
 
