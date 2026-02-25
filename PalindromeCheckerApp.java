@@ -1,7 +1,5 @@
 import java.util.Scanner;
-
 class PalindromeCheckerApp {
-
     static class Node {
         char data;
         Node next;
