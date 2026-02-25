@@ -1,10 +1,9 @@
 import java.util.Scanner;
-
-class UseCase8PalindromeCheckerApp {
-
+class PalindromeCheckerApp {
     static class Node {
         char data;
         Node next;
+
         Node(char data) {
             this.data = data;
             this.next = null;
